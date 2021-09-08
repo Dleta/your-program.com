@@ -96,3 +96,10 @@ footer {
     width: 100%;
   }
 }
+
+.language{
+  float: right;
+}
+#active-language{
+  background-color: blue;
+}
