@@ -1,0 +1,66 @@
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: white;
+}
+
+/*nav bar styling*/
+nav {
+  background-color: gray;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  height: 2rem;
+  position: relative;
+
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  margin: 0;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  color: black;
+}
+
+nav ul {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li:hover {
+  background-color: rgb(83, 83, 83);
+}
+
+.lang-button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  float: right;
+  margin: 0;
+}
+
+.active-page {
+  background-color: rgb(83, 83, 83);
+}
+.active-lang {
+  background-color: blue;
+}
