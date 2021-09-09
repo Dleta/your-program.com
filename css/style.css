@@ -64,3 +64,13 @@ nav ul li:hover {
 .active-lang {
   background-color: blue;
 }
+
+/*logo styling*/
+
+.big-logos {
+  width: 60%;
+  height: auto;
+}
+.welcome {
+  width: 100%;
+}
