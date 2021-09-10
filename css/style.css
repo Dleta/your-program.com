@@ -6,8 +6,7 @@ body {
 h1,
 h2,
 h3,
-p,
-a {
+p {
   color: white;
 }
 
@@ -72,5 +71,16 @@ nav ul li:hover {
   height: auto;
 }
 .welcome {
-  width: 100%;
+  width: 70%;
+}
+
+/*link styling*/
+
+.red-link:hover {
+  border: dotted;
+  color: rgb(206, 6, 6);
+}
+.red-link {
+  text-decoration: none;
+  color: red;
 }
