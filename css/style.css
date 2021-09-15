@@ -43,10 +43,13 @@ nav ul li a {
 nav ul {
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 3px;
 }
 
 nav ul li:hover {
+  border-width: 2px;
+  border: solid;
+  border-color: red;
   background-color: rgb(83, 83, 83);
 }
 
@@ -56,9 +59,16 @@ nav ul li:hover {
   float: right;
   margin: 0;
 }
+.lang-button:hover {
+  border: none;
+}
 
 .active-page {
+  border: none;
   background-color: rgb(83, 83, 83);
+}
+.active-page:hover {
+  border: none;
 }
 .active-lang {
   background-color: blue;
@@ -83,4 +93,29 @@ nav ul li:hover {
 .red-link {
   text-decoration: none;
   color: red;
+}
+.small-download-button {
+  width: auto;
+  height: 3rem;
+  background-color: gray;
+  border-radius: 1rem;
+}
+.small-download-button:hover {
+  background-color: rgb(83, 83, 83);
+}
+
+/*button styling*/
+
+.send-mail-button {
+  height: 4rem;
+  width: 10rem;
+  border: none;
+  border-radius: 0;
+  background-color: gray;
+}
+
+.send-mail-button:hover {
+  background-color: rgb(83, 83, 83);
+  border: solid;
+  border-color: red;
 }
