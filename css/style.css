@@ -19,6 +19,8 @@ nav {
 }
 
 nav ul li {
+  border-radius: 1rem;
+
   display: inline-block;
   height: 2rem;
   position: relative;
@@ -47,9 +49,9 @@ nav ul {
 }
 
 nav ul li:hover {
-  border-width: 2px;
   border: solid;
-  border-color: red;
+  border-color: black;
+  border-radius: 1rem;
   background-color: rgb(83, 83, 83);
 }
 
@@ -60,18 +62,23 @@ nav ul li:hover {
   margin: 0;
 }
 .lang-button:hover {
-  border: none;
+  border: solid;
+  border-color: black;
 }
 
 .active-page {
-  border: none;
+  border: solid;
+  border-color: black;
   background-color: rgb(83, 83, 83);
 }
 .active-page:hover {
-  border: none;
+  border: solid;
+  border-color: black;
 }
 .active-lang {
-  background-color: blue;
+  border: solid;
+  border-color: black;
+  background-color: rgb(83, 83, 83);
 }
 
 /*logo styling*/
@@ -110,12 +117,13 @@ nav ul li:hover {
   height: 4rem;
   width: 10rem;
   border: none;
-  border-radius: 0;
+  border-radius: 1rem;
   background-color: gray;
 }
 
 .send-mail-button:hover {
   background-color: rgb(83, 83, 83);
   border: solid;
-  border-color: red;
+  border-color: white;
+  border-radius: 1rem;
 }
