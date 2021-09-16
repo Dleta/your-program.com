@@ -8,34 +8,38 @@
     <title>about</title>
   </head>
   <body>
+    <script>
+      if (localStorage.getItem("light") == "true") {
+        document.body.classList.add("light");
+      }
+    </script>
+    <button class="darkmode-switch" id="betta_theme-button">🔅</button>
+
     <nav>
       <ul class="no-dots-list">
         <li>
-          <a href="index.html">home</a>
+          <a href="/de/index.html">home</a>
         </li>
         <li>
-          <a href="downloads.html">downloads</a>
+          <a href="/de/downloads.html">downloads</a>
         </li>
         <li>
-          <a href="contact.html">contact</a>
+          <a href="/de/contact.html">contact</a>
         </li>
         <li class="active-page">
-          <a href="about.html">about</a>
+          <a href="/de/about.html">about</a>
         </li>
         <li class="lang-button active-lang">
-          <a href="/de/about.html">de</a>
+          <a href="/de/index.html">de</a>
         </li>
         <li class="lang-button">
-          <a href="/about.html">en</a>
+          <a href="/">en</a>
         </li>
       </ul>
     </nav>
     <article>
-      <img
-        src="/de/ico/about_logo_de.png"
-        alt="welcome-logo"
-        class="big-logos"
-      />
+      <img src="/ico/about_big.png" alt="about-logo" class="big-logos" />
     </article>
+    <script src="/js/scripts.js"></script>
   </body>
 </html>
