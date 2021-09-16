@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+
     <title>home</title>
   </head>
   <body>
+    <script>
+      if (localStorage.getItem("light") == "true") {
+        document.body.classList.add("light");
+      }
+    </script>
+    <button class="darkmode-switch" id="betta_theme-button">🔅</button>
     <nav>
       <ul class="no-dots-list">
         <li class="active-page">
@@ -45,5 +52,6 @@
         <a href="/downloads.html" class="red-link">dowloads</a> page.
       </h3>
     </article>
+    <script src="/js/scripts.js"></script>
   </body>
 </html>

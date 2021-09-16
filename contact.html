@@ -8,6 +8,13 @@
     <title>contact</title>
   </head>
   <body>
+    <script>
+      if (localStorage.getItem("light") == "true") {
+        document.body.classList.add("light");
+      }
+    </script>
+    <button class="darkmode-switch" id="betta_theme-button">🔅</button>
+
     <nav>
       <ul class="no-dots-list">
         <li>
@@ -39,5 +46,6 @@
         ><button class="send-mail-button">send E-Mail</button></a
       >
     </article>
+    <script src="/js/scripts.js"></script>
   </body>
 </html>

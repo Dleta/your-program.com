@@ -8,6 +8,13 @@
     <title>about</title>
   </head>
   <body>
+    <script>
+      if (localStorage.getItem("light") == "true") {
+        document.body.classList.add("light");
+      }
+    </script>
+    <button class="darkmode-switch" id="betta_theme-button">🔅</button>
+
     <nav>
       <ul class="no-dots-list">
         <li>
@@ -33,5 +40,6 @@
     <article>
       <img src="/ico/about_big.png" alt="welcome-logo" class="big-logos" />
     </article>
+    <script src="/js/scripts.js"></script>
   </body>
 </html>

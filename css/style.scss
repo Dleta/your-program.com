@@ -1,5 +1,11 @@
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray: #7d7d7d;
+$color-dark-gray: #535353;
+$color-red: #ff0000;
+
 body {
-  background-color: #000000;
+  background-color: $color-black;
   font-family: sans-serif;
 }
 
@@ -7,12 +13,12 @@ h1,
 h2,
 h3,
 p {
-  color: #ffffff;
+  color: $color-white;
 }
 
 /*nav bar styling*/
 nav {
-  background-color: #7d7d7d;
+  background-color: $color-gray;
   border-radius: 1rem;
   overflow: hidden;
   margin: 0;
@@ -20,13 +26,16 @@ nav {
 
 nav ul li {
   border-radius: 1rem;
+
   display: inline-block;
   height: 2rem;
   position: relative;
+
   padding-top: 1rem;
   padding-bottom: 0rem;
   padding-left: 1rem;
   padding-right: 1rem;
+
   margin: 0;
   text-transform: uppercase;
 }
@@ -36,7 +45,7 @@ nav ul li a {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin: 0;
-  color: #000000;
+  color: $color-black;
 }
 
 nav ul {
@@ -46,7 +55,7 @@ nav ul {
 }
 
 nav ul li:hover {
-  background-color: #535353;
+  background-color: $color-dark-gray;
 }
 
 .lang-button {
@@ -55,106 +64,104 @@ nav ul li:hover {
   float: right;
   margin: 0;
 }
-
 .lang-button:hover {
-  background-color: #535353;
+  background-color: $color-dark-gray;
 }
 
 .active-page {
-  background-color: #535353;
+  background-color: $color-dark-gray;
 }
 
 .active-lang {
-  background-color: #535353;
+  background-color: $color-dark-gray;
 }
 
 /*logo styling*/
+
 .big-logos {
   width: 60%;
   height: auto;
 }
-
 .welcome {
   width: 70%;
 }
 
 /*link styling*/
+
 .red-link:hover {
   border: dotted;
-  color: #ff0000;
+  color: $color-red;
 }
-
 .red-link {
   text-decoration: none;
-  color: #ff0000;
+  color: $color-red;
 }
-
 .small-download-button {
   width: auto;
   height: 3rem;
-  background-color: #7d7d7d;
+  background-color: $color-gray;
   border-radius: 1rem;
 }
-
 .small-download-button:hover {
-  background-color: #535353;
+  background-color: $color-dark-gray;
 }
 
 /*button styling*/
+
 .send-mail-button {
   height: 4rem;
   width: 10rem;
   border: none;
   border-radius: 1rem;
-  background-color: #7d7d7d;
+  background-color: $color-gray;
 }
 
 .send-mail-button:hover {
-  background-color: #535353;
+  background-color: $color-dark-gray;
   border: solid;
-  border-color: #ffffff;
+  border-color: $color-white;
   border-radius: 1rem;
 }
 
 /*dark & light mode*/
+
 .darkmode-switch {
   width: 2rem;
   height: 2rem;
+
   position: absolute;
   bottom: 1.25rem;
   left: 2rem;
   z-index: 1;
+
   border-radius: 50%;
   border-style: solid;
-  border-color: #ffffff;
-  background-color: #000000;
+  border-color: $color-white;
+  background-color: $color-black;
 }
-
 .light .darkmode-switch {
-  border-color: #000000;
-  background-color: #ffffff;
+  border-color: $color-black;
+  background-color: $color-white;
 }
 
 .darkmode-switch:hover {
-  background-color: #ffffff;
+  background-color: $color-white;
 }
-
 .light .darkmode-switch:hover {
-  background-color: #000000;
+  background-color: $color-black;
 }
 
 .light {
-  background-color: #ffffff;
+  background-color: $color-white;
 }
 
 .light h1,
 .light h2,
 .light h3,
 .light p {
-  color: #000000;
+  color: $color-black;
 }
 
 .light .small-download-button {
-  border: solid #000000;
+  border: solid $color-black;
 }
-/*# sourceMappingURL=style.css.map */
