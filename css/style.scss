@@ -163,5 +163,20 @@ nav ul li:hover {
 }
 
 .light .small-download-button {
-  border: solid $color-black;
+  border: dotted $color-black;
+}
+
+/* dark and light mode logos*/
+.light .light-img {
+  display: none;
+}
+.light .dark-img {
+  display: inline;
+}
+
+.light-img {
+  display: inline;
+}
+.dark-img {
+  display: none;
 }

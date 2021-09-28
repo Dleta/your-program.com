@@ -41,3 +41,19 @@ function betta_addListener(element, e, f) {
     f(event);
   });
 }
+
+window.smartlook ||
+  (function (d) {
+    var o = (smartlook = function () {
+        o.api.push(arguments);
+      }),
+      h = d.getElementsByTagName("head")[0];
+    var c = d.createElement("script");
+    o.api = new Array();
+    c.async = true;
+    c.type = "text/javascript";
+    c.charset = "utf-8";
+    c.src = "https://rec.smartlook.com/recorder.js";
+    h.appendChild(c);
+  })(document);
+smartlook("init", "4f67633ae3794ffc3d3e3e00761e875332554c27");
