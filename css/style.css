@@ -155,6 +155,23 @@ nav ul li:hover {
 }
 
 .light .small-download-button {
-  border: solid #000000;
+  border: dotted #000000;
+}
+
+/* dark and light mode logos*/
+.light .light-img {
+  display: none;
+}
+
+.light .dark-img {
+  display: inline;
+}
+
+.light-img {
+  display: inline;
+}
+
+.dark-img {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
