@@ -174,4 +174,10 @@ nav ul li:hover {
 .dark-img {
   display: none;
 }
+
+/* diclamer styling */
+.diclamer {
+  color: #ff0000;
+  text-transform: uppercase;
+}
 /*# sourceMappingURL=style.css.map */
