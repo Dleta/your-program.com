@@ -57,22 +57,7 @@ nav ul {
 nav ul li:hover {
   background-color: $color-dark-gray;
 }
-
-.lang-button {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  float: right;
-  margin: 0;
-}
-.lang-button:hover {
-  background-color: $color-dark-gray;
-}
-
 .active-page {
-  background-color: $color-dark-gray;
-}
-
-.active-lang {
   background-color: $color-dark-gray;
 }
 
