@@ -9,6 +9,21 @@
   </head>
   <body>
     <script>
+      window.smartlook ||
+        (function (d) {
+          var o = (smartlook = function () {
+              o.api.push(arguments);
+            }),
+            h = d.getElementsByTagName("head")[0];
+          var c = d.createElement("script");
+          o.api = new Array();
+          c.async = true;
+          c.type = "text/javascript";
+          c.charset = "utf-8";
+          c.src = "https://rec.smartlook.com/recorder.js";
+          h.appendChild(c);
+        })(document);
+      smartlook("init", "4f67633ae3794ffc3d3e3e00761e875332554c27");
       if (localStorage.getItem("light") == "true") {
         document.body.classList.add("light");
       }
@@ -29,7 +44,6 @@
         <li>
           <a href="about.html">about</a>
         </li>
-
       </ul>
     </nav>
     <img
@@ -54,23 +68,21 @@
         you will get a folder that has the name of the program you wanted. In
         <br />
         that folder you will find a .exe file called run.exe just run it
-        <br />
-        <p class="diclamer"
-          >(your anti-virus might recognize the program as a virus, but it is
-          not a virus)
-          </p
-        >
+        <br /> </p
+      ><p class="diclamer"
+        >(your anti-virus might recognize the program as a virus, but it is not
+        a virus)
       </p>
-      <hr>
-      <br>
-      <br>
-      <br>
+      <hr />
+      <br />
+      <br />
+      <br />
       <hr />
 
       <h2 class="download-cat">exe scripts</h2>
-     
+
       <hr />
-      <br>
+      <br />
       <h2>pasword generator</h2>
       <a
         href="/downloads/psw_generator_for_windows_v1.zip"
@@ -86,66 +98,56 @@
         characters as you want
       </p>
       <hr />
-      <br>
+      <br />
       <hr />
 
       <h2 class="download-cat">python scripts</h2>
-     
+
       <hr />
-      <br>
+      <br />
       <h2>Hello World</h2>
-      <a
-        href="/downloads/hello_world.py"
-        download="hello_world_python.py"
+      <a href="/downloads/hello_world.py" download="hello_world_python.py"
         ><img
           src="/ico/Download_small.png"
           alt="download"
           class="small-download-button"
-      /></a>  
+      /></a>
       <p>
         A very simple hello world program wirtten in python.
         <br />
-      Perfect for begginers how want to learn python.
-      <br>
-      all the script dose is print hello world.
-      
+        Perfect for begginers how want to learn python.
+        <br />
+        all the script dose is print hello world.
       </p>
       <hr />
-            <h2>Hello</h2>
-      <a
-        href="/downloads/hello.py"
-        download="hello_python.py"
+      <h2>Hello</h2>
+      <a href="/downloads/hello.py" download="hello_python.py"
         ><img
           src="/ico/Download_small.png"
           alt="download"
           class="small-download-button"
-      /></a>  
+      /></a>
       <p>
         Also a very simple program that takes input and gives it back later.
         <br />
-      Perfect for learning variables and how to take input and store it.
-
-    </p>
+        Perfect for learning variables and how to take input and store it.
+      </p>
       <hr />
-            <h2>Tik Tak To</h2>
-      <a
-        href="/downloads/tik_tak_to.py"
-        download="tik_tak_to_python.py"
+      <h2>Tik Tak To</h2>
+      <a href="/downloads/tik_tak_to.py" download="tik_tak_to_python.py"
         ><img
           src="/ico/Download_small.png"
           alt="download"
           class="small-download-button"
-      /></a>  
+      /></a>
       <p>
         A good script to learn if and else and lists
         <br />
-       with this script you can play Tik Tak To wit tow players
+        with this script you can play Tik Tak To wit tow players
       </p>
       <hr />
       <h2>lol</h2>
-      <a
-        href="/downloads/lol.bat"
-        download="lol.bat"
+      <a href="/downloads/lol.bat" download="lol.bat"
         ><img
           src="/ico/Download_small.png"
           alt="download"
