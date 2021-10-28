@@ -10,6 +10,21 @@
   </head>
   <body>
     <script>
+      window.smartlook ||
+        (function (d) {
+          var o = (smartlook = function () {
+              o.api.push(arguments);
+            }),
+            h = d.getElementsByTagName("head")[0];
+          var c = d.createElement("script");
+          o.api = new Array();
+          c.async = true;
+          c.type = "text/javascript";
+          c.charset = "utf-8";
+          c.src = "https://rec.smartlook.com/recorder.js";
+          h.appendChild(c);
+        })(document);
+      smartlook("init", "4f67633ae3794ffc3d3e3e00761e875332554c27");
       if (localStorage.getItem("light") == "true") {
         document.body.classList.add("light");
       }
@@ -45,11 +60,11 @@
 
     <article>
       <h3>
-        on this webside you can download free programs that we coded,<br />
+        on this website you can download free programs that we coded,<br />
         the programs are simple and should be easy to use. <br />
-        if you want to downlaod one of thise programs just <br />
+        if you want to download one of these programs just <br />
         head over to the
-        <a href="/downloads.html" class="red-link">dowloads</a> page.
+        <a href="/downloads.html" class="red-link">downloads</a> page.
       </h3>
     </article>
     <script src="/js/scripts.js"></script>
