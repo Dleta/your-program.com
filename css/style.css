@@ -31,6 +31,19 @@ nav ul li {
   text-transform: uppercase;
 }
 
+ul li {
+  border-radius: 1rem;
+  display: inline-block;
+  height: 2rem;
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
 nav ul li a {
   text-decoration: none;
   padding-top: 1rem;
@@ -49,22 +62,7 @@ nav ul li:hover {
   background-color: #535353;
 }
 
-.lang-button {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  float: right;
-  margin: 0;
-}
-
-.lang-button:hover {
-  background-color: #535353;
-}
-
 .active-page {
-  background-color: #535353;
-}
-
-.active-lang {
   background-color: #535353;
 }
 

@@ -22,9 +22,25 @@ nav {
   border-radius: 1rem;
   overflow: hidden;
   margin: 0;
+
+  ul li {
+    border-radius: 1rem;
+
+    display: inline-block;
+    height: 2rem;
+    position: relative;
+
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    margin: 0;
+    text-transform: uppercase;
+  }
 }
 
-nav ul li {
+ul li {
   border-radius: 1rem;
 
   display: inline-block;
