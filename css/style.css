@@ -76,6 +76,11 @@ nav ul li:hover {
   width: 70%;
 }
 
+.about {
+  width: 50%;
+  height: auto;
+}
+
 /*link styling*/
 .red-link:hover {
   border: dotted;

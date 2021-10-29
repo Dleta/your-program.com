@@ -9,21 +9,6 @@
   </head>
   <body>
     <script>
-      window.smartlook ||
-        (function (d) {
-          var o = (smartlook = function () {
-              o.api.push(arguments);
-            }),
-            h = d.getElementsByTagName("head")[0];
-          var c = d.createElement("script");
-          o.api = new Array();
-          c.async = true;
-          c.type = "text/javascript";
-          c.charset = "utf-8";
-          c.src = "https://rec.smartlook.com/recorder.js";
-          h.appendChild(c);
-        })(document);
-      smartlook("init", "4f67633ae3794ffc3d3e3e00761e875332554c27");
       if (localStorage.getItem("light") == "true") {
         document.body.classList.add("light");
       }
@@ -51,19 +36,24 @@
       alt="welcome-logo"
       class="big-logos light-img"
     />
-    <img src="#" alt="welcome-logo" class="big-logos welcome dark-img" />
+    <img
+      src="/ico/schwarz_en/about.svg"
+      alt="welcome-logo"
+      class="big-logos about dark-img"
+    />
 
     <article>
       <h1>how we are </h1>
       <p>
-        on this website you can download simple scripts and programs. for <br />
-        example you need a password generator, you’re at the write place. if
-        your <br />
-        learning python your also at the write place, we let you download all
+        how we are on this website you can download simple scripts and programs.
         <br />
-        our python scripts as source code so you can copy & paste them as match
+        for example you need a password generator, you’re at the right place. if
         <br />
-        as You want. <br />
+        your learning python your also at the right place, we let you download
+        <br />
+        all our python scripts as source code so you can copy & paste them as
+        <br />
+        much as You want. code so you can copy & paste them as m <br />
       </p>
     </article>
     <script src="/js/scripts.js"></script>
