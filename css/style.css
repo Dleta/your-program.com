@@ -8,6 +8,7 @@ h2,
 h3,
 p {
   color: #ffffff;
+  line-height: 1.2rem;
 }
 
 /*nav bar styling*/
@@ -189,7 +190,11 @@ nav ul li:hover {
   text-transform: uppercase;
 }
 
-/* downlad titles */
+/* download titles */
+.download-title {
+  color: #ff0000;
+}
+
 .download-cat {
   color: #ff0000;
   font-size: 2rem;
