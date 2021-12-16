@@ -1,211 +1,492 @@
+/*---------------------------------------
+  VARIABLES
+---------------------------------------*/
+/*ten levels of grey */
+/*secondary colors*/
+/*light*/
+/*dark*/
+/*Shady stuff*/
+/* level 0 */
+/* level 1 */
+/* level 2 */
+/* level 2 inverted */
+/* level 3 */
+/*---------------------------------------
+  GLOBAL
+---------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /*times 16(standard font size) = 10px*/
+}
+
 body {
-  background-color: #000000;
-  font-family: sans-serif;
-}
-
-h1,
-h2,
-h3,
-p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+  font-weight: 400;
   color: #ffffff;
-  line-height: 1.2rem;
+  background-color: #000000;
 }
 
-/*nav bar styling*/
-nav {
-  background-color: #7d7d7d;
-  border-radius: 1rem;
-  overflow: hidden;
-  margin: 0;
-}
-
-nav ul li {
-  border-radius: 1rem;
-  display: inline-block;
-  height: 2rem;
-  position: relative;
-  padding-top: 1rem;
-  padding-bottom: 0rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-ul li {
-  border-radius: 1rem;
-  display: inline-block;
-  height: 2rem;
-  position: relative;
-  padding-top: 1rem;
-  padding-bottom: 0rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-nav ul li a {
+a {
   text-decoration: none;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin: 0;
-  color: #000000;
+  color: #ffffff;
 }
 
-nav ul {
+.subheading {
+  margin-top: 10rem;
+  margin-bottom: 1.5rem;
+  color: #ff1919;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.mobile-nav-btn {
+  display: none;
+}
+
+/*---------------------------------------
+  reuseable
+---------------------------------------*/
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 10rem;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+.grid--2-cols {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.container {
+  max-width: 140rem;
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+.center-text {
   text-align: center;
-  padding: 0;
-  margin: 3px;
 }
 
-nav ul li:hover {
-  background-color: #535353;
-}
-
-.active-page {
-  background-color: #535353;
-}
-
-/*logo styling*/
-.big-logos {
-  width: 60%;
-  height: auto;
-}
-
-.welcome {
-  width: 70%;
-}
-
-.about {
-  width: 50%;
-  height: auto;
-}
-
-/*link styling*/
-.red-link:hover {
-  border: dotted;
-  color: #ff0000;
-}
-
-.red-link {
-  text-decoration: none;
-  color: #ff0000;
-}
-
-.small-download-button {
-  width: auto;
-  height: 3rem;
-  background-color: #7d7d7d;
-  border-radius: 1rem;
-}
-
-.small-download-button:hover {
-  background-color: #535353;
-}
-
-/*button styling*/
-.send-mail-button {
-  height: 4rem;
-  width: 10rem;
-  border: none;
-  border-radius: 1rem;
-  background-color: #7d7d7d;
-}
-
-.send-mail-button:hover {
-  background-color: #535353;
-  border: solid;
-  border-color: #ffffff;
-  border-radius: 1rem;
-}
-
-/*dark & light mode*/
-.darkmode-switch {
-  width: 2rem;
-  height: 2rem;
+/*---------------------------------------
+  NAVIGATION
+---------------------------------------*/
+.header {
+  height: 12rem;
+  padding: 0 5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000000;
   position: fixed;
-  bottom: 1.25rem;
-  right: 2rem;
-  z-index: 1;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #ffffff;
-  background-color: #000000;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  border-bottom: 0.1rem solid #ffffff;
 }
 
-.light .darkmode-switch {
-  border-color: #000000;
-  background-color: #ffffff;
-}
-
-.darkmode-switch:hover {
-  background-color: #ffffff;
-}
-
-.light .darkmode-switch:hover {
-  background-color: #000000;
-}
-
-.light {
-  background-color: #ffffff;
-}
-
-.light h1,
-.light h2,
-.light h3,
-.light p {
-  color: #000000;
-}
-
-.light .small-download-button {
-  border: dotted #000000;
-}
-
-.light.diclamer {
-  color: #ff0000;
-  text-transform: uppercase;
-}
-
-/* dark and light mode logos*/
-.light .light-img {
-  display: none;
-}
-
-.light .dark-img {
-  display: inline;
-}
-
-.light-img {
-  display: inline;
-}
-
-.dark-img {
-  display: none;
-}
-
-/* diclamer styling */
-.diclamer {
-  color: #ff0000;
-  text-transform: uppercase;
-}
-
-/* download titles */
-.download-title {
-  color: #ff0000;
-}
-
-.download-cat {
-  color: #ff0000;
-  font-size: 2rem;
+.welcome-logo {
   padding: 0;
   margin: 0;
+  height: 10rem;
+  width: auto;
 }
 
-/* phone styling */
-@media only screen and (max-width: 600px) {
-  nav {
+.download-logo {
+  padding: 0;
+  margin: 0;
+  margin-top: -10rem;
+  height: 20rem;
+  width: auto;
+}
+
+.about-logo {
+  padding: 0;
+  margin: 0;
+  margin-top: -10rem;
+  height: 20rem;
+  width: auto;
+}
+
+.main-nav-ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.5rem;
+}
+
+.nav-item {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.main-nav-link {
+  color: #ffffff;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #ff0000;
+}
+
+/*---------------------------------------
+  DOWNLOADS
+---------------------------------------*/
+.subheading-downloads {
+  margin-bottom: 10rem;
+}
+
+.hero-downloads {
+  margin-top: 15rem;
+}
+
+.disclaimer-title {
+  color: #ff0000;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.diclaimer {
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+.disclaimer-hr {
+  margin-top: 0.25rem;
+}
+
+.red {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+/*download cards*/
+.download-cards-section {
+  margin-top: 5rem;
+}
+
+.download-card {
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 0.5rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.download-card:hover,
+.download-card:active {
+  background-color: #e0e0e0;
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+}
+
+.download-name {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.name-and-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.autor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.author-ico {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+.download-description {
+  line-height: 1.6rem;
+  font-size: 1.25rem;
+  margin-bottom: 5rem;
+}
+
+.lang-icon {
+  margin-left: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.download-icon {
+  color: #000000;
+  margin-left: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.download-btn-description {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/*---------------------------------------
+  HERO
+---------------------------------------*/
+.main-section-hero {
+  margin-top: 15rem;
+}
+
+.main-heading-title {
+  font-size: 6rem;
+  margin-bottom: 3rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+}
+
+.main-logo {
+  max-width: 70rem;
+  height: auto;
+}
+
+.hero-subscription {
+  margin-top: 8rem;
+}
+
+.hero-nav {
+  margin-top: 5rem;
+}
+
+.hero-nav-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-nav-description {
+  line-height: 2rem;
+  font-size: 1.65rem;
+  margin-bottom: 10rem;
+}
+
+/*---------------------------------------
+  BUTTONS
+---------------------------------------*/
+.btn {
+  background-color: #ffffff;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: #bdbdbd;
+}
+
+.btn:active {
+  padding: 0.9rem;
+}
+
+.download-btn {
+  border: 0.1rem solid #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 13rem;
+}
+
+.big-btn {
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  align-items: center;
+  margin: 10rem 10rem;
+  height: 10rem;
+  background-color: #ff0000;
+}
+
+.big-btn:hover {
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+  background-color: #b30000;
+  border: 2rem solid #b30000;
+  height: 14rem;
+}
+
+.get-python-btn {
+  margin-top: 10rem;
+}
+
+/*---------------------------------------
+  HOW TO 
+---------------------------------------*/
+.big-python-logo {
+  height: 50rem;
+  width: auto;
+  color: #ffffff;
+}
+
+.how-to-description {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+/*---------------------------------------
+  ABOUT
+---------------------------------------*/
+.section-identey {
+  margin-top: 20rem;
+}
+
+.name-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 0.5rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.name-card:hover,
+.name-card:active {
+  background-color: #e0e0e0;
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+}
+
+.name-card-name {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .welcome-logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .main-nav-ul {
+    display: none;
+  }
+  .mobile-nav-btn {
+    display: inherit;
+  }
+  .mob-btn {
+    font-size: 8rem;
+  }
+  .mobile-nav-close-btn {
+    display: none;
+  }
+  .nav-open .mobile-nav-close-btn {
+    display: inherit;
+  }
+  .nav-open .mobile-nav-open-btn {
+    display: none;
+  }
+  .nav-open .main-nav-ul {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
+    height: 100vh;
+    background-color: rgba(88, 88, 88, 0.99);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav-open .main-nav-link {
+    font-weight: 500;
+    line-height: 2;
+    font-size: 5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

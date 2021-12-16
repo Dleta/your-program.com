@@ -1,219 +1,494 @@
+/*---------------------------------------
+  VARIABLES
+---------------------------------------*/
+$main-font: #ffffff;
 $color-white: #ffffff;
 $color-black: #000000;
-$color-gray: #7d7d7d;
-$color-dark-gray: #535353;
-$color-red: #ff0000;
+
+/*ten levels of grey */
+$color-base-0: #fafafa;
+$color-base-1: #f5f5f5;
+$color-base-2: #eeeeee;
+$color-base-3: #e0e0e0;
+$color-base-4: #bdbdbd;
+$color-base-5: #9e9e9e;
+$color-base-6: #757575;
+$color-base-7: #616161;
+$color-base-8: #424242;
+$color-base-9: #212121;
+$color-base-10: #121212;
+
+/*secondary colors*/
+/*light*/
+$color-red-1: #ff0000;
+$color-red-2: #ff0000;
+$color-red-3: #ff1919;
+$color-red-4: #ff3232;
+$color-red-5: #ff4c4c;
+$color-red-6: #ff6666;
+$color-red-7: #ff7f7f;
+$color-red-8: #ff9999;
+$color-red-9: #ffb2b2;
+$color-red-10: #ffcccc;
+$color-red-11: #ffe6e6;
+
+/*dark*/
+$color-red-12: #ff0000;
+$color-red-13: #e60000;
+$color-red-14: #cc0000;
+$color-red-15: #b30000;
+$color-red-16: #990000;
+$color-red-17: #800000;
+$color-red-18: #660000;
+$color-red-19: #4c0000;
+$color-red-20: #330000;
+$color-red-21: #190000;
+
+/*Shady stuff*/
+
+/* level 0 */
+$shadow-level-0: 0 0 0 0 rgba(0, 0, 0, 0.2);
+
+/* level 1 */
+$shadow-level-1: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+$dark-shadow-level-1: 0 1px 3px 1px rgba(0, 0, 0, 0.5);
+
+/* level 2 */
+$shadow-level-2: 0 2px 6px 1px rgba(0, 0, 0, 0.2);
+$dark-shadow-level-2: 0 2px 6px 1px rgba(0, 0, 0, 0.9);
+
+/* level 2 inverted */
+$shadow-level-2-i: 0 -2px 6px 1px rgba(0, 0, 0, 0.2);
+$dark-shadow-level-2-i: 0 -2px 6px 1px rgba(0, 0, 0, 0.9);
+
+/* level 3 */
+$shadow-level-3: 0 3px 8px 1px rgba(0, 0, 0, 0.2);
+$dark-shadow-level-3: 0 3px 8px 1px rgba(0, 0, 0, 0.9);
+
+/*---------------------------------------
+  GLOBAL
+---------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /*times 16(standard font size) = 10px*/
+}
 
 body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: $main-font;
   background-color: $color-black;
-  font-family: sans-serif;
 }
 
-h1,
-h2,
-h3,
-p {
-  color: $color-white;
-  line-height: 1.2rem;
-}
-
-/*nav bar styling*/
-nav {
-  background-color: $color-gray;
-  border-radius: 1rem;
-  overflow: hidden;
-  margin: 0;
-
-  ul li {
-    border-radius: 1rem;
-
-    display: inline-block;
-    height: 2rem;
-    position: relative;
-
-    padding-top: 1rem;
-    padding-bottom: 0rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    margin: 0;
-    text-transform: uppercase;
-  }
-}
-
-ul li {
-  border-radius: 1rem;
-
-  display: inline-block;
-  height: 2rem;
-  position: relative;
-
-  padding-top: 1rem;
-  padding-bottom: 0rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-
-  margin: 0;
-  text-transform: uppercase;
-}
-
-nav ul li a {
+a {
   text-decoration: none;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin: 0;
-  color: $color-black;
+  color: $main-font;
 }
 
-nav ul {
+.subheading {
+  margin-top: 10rem;
+  margin-bottom: 1.5rem;
+  color: $color-red-3;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.mobile-nav-btn {
+  display: none;
+}
+
+/*---------------------------------------
+  reuseable
+---------------------------------------*/
+
+.grid {
+  display: grid;
+  gap: 10rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.container {
+  max-width: 140rem;
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+.center-text {
   text-align: center;
-  padding: 0;
-  margin: 3px;
 }
 
-nav ul li:hover {
-  background-color: $color-dark-gray;
-}
-.active-page {
-  background-color: $color-dark-gray;
-}
+/*---------------------------------------
+  NAVIGATION
+---------------------------------------*/
 
-/*logo styling*/
-
-.big-logos {
-  width: 60%;
-  height: auto;
-}
-.welcome {
-  width: 70%;
-}
-
-.about {
-  width: 50%;
-  height: auto;
-}
-/*link styling*/
-
-.red-link:hover {
-  border: dotted;
-  color: $color-red;
-}
-.red-link {
-  text-decoration: none;
-  color: $color-red;
-}
-.small-download-button {
-  width: auto;
-  height: 3rem;
-  background-color: $color-gray;
-  border-radius: 1rem;
-}
-.small-download-button:hover {
-  background-color: $color-dark-gray;
-}
-
-/*button styling*/
-
-.send-mail-button {
-  height: 4rem;
-  width: 10rem;
-  border: none;
-  border-radius: 1rem;
-  background-color: $color-gray;
-}
-
-.send-mail-button:hover {
-  background-color: $color-dark-gray;
-  border: solid;
-  border-color: $color-white;
-  border-radius: 1rem;
-}
-
-/*dark & light mode*/
-
-.darkmode-switch {
-  width: 2rem;
-  height: 2rem;
+.header {
+  height: 12rem;
+  padding: 0 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-black;
 
   position: fixed;
-  bottom: 1.25rem;
-  right: 2rem;
-  z-index: 1;
-
-  border-radius: 50%;
-  border-style: solid;
-  border-color: $color-white;
-  background-color: $color-black;
-}
-.light .darkmode-switch {
-  border-color: $color-black;
-  background-color: $color-white;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  border-bottom: 0.1rem solid $color-white;
 }
 
-.darkmode-switch:hover {
-  background-color: $color-white;
-}
-.light .darkmode-switch:hover {
-  background-color: $color-black;
-}
-
-.light {
-  background-color: $color-white;
-}
-
-.light h1,
-.light h2,
-.light h3,
-.light p {
-  color: $color-black;
-}
-
-.light .small-download-button {
-  border: dotted $color-black;
-}
-
-.light.diclamer {
-  color: $color-red;
-  text-transform: uppercase;
-}
-
-/* dark and light mode logos*/
-.light .light-img {
-  display: none;
-}
-.light .dark-img {
-  display: inline;
-}
-
-.light-img {
-  display: inline;
-}
-.dark-img {
-  display: none;
-}
-
-/* diclamer styling */
-
-.diclamer {
-  color: $color-red;
-  text-transform: uppercase;
-}
-
-/* download titles */
-.download-title{
-  color: $color-red;
-}
-.download-cat {
-  color: $color-red;
-  font-size: 2rem;
+.welcome-logo {
   padding: 0;
   margin: 0;
+  height: 10rem;
+  width: auto;
 }
 
-/* phone styling */
+.download-logo {
+  padding: 0;
+  margin: 0;
+  margin-top: -10rem;
+  height: 20rem;
+  width: auto;
+}
 
-@media only screen and (max-width: 600px) {
-  nav {
-    width: 100%;
+.about-logo {
+  padding: 0;
+  margin: 0;
+  margin-top: -10rem;
+  height: 20rem;
+  width: auto;
+}
+
+.main-nav-ul {
+  list-style: none;
+  display: flex;
+  gap: 3.5rem;
+}
+
+.nav-item {
+  font-size: 2rem;
+  color: $main-font;
+}
+
+.main-nav-link {
+  color: $main-font;
+  transition: all 0.35s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: $color-red-1;
+}
+
+/*---------------------------------------
+  DOWNLOADS
+---------------------------------------*/
+.subheading-downloads {
+  margin-bottom: 10rem;
+}
+.hero-downloads {
+  margin-top: 15rem;
+}
+
+.disclaimer-title {
+  color: $color-red-1;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.diclaimer {
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+.disclaimer-hr {
+  margin-top: 0.25rem;
+}
+
+.red {
+  color: $color-red-1;
+  font-weight: bold;
+}
+
+/*download cards*/
+
+.download-cards-section {
+  margin-top: 5rem;
+}
+
+.download-card {
+  padding: 1rem;
+  background-color: $color-white;
+  color: $color-black;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+}
+
+.download-card:hover,
+.download-card:active {
+  background-color: $color-base-3;
+  transform: translateY(-1.5rem);
+}
+
+.download-name {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.name-and-tags {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+
+.autor {
+  display: flex;
+  align-items: center;
+}
+
+.author-ico {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+.download-description {
+  line-height: 1.6rem;
+  font-size: 1.25rem;
+  margin-bottom: 5rem;
+}
+
+.lang-icon {
+  margin-left: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.download-icon {
+  color: $color-black;
+  margin-left: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.download-btn-description {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/*---------------------------------------
+  HERO
+---------------------------------------*/
+
+.main-section-hero {
+  margin-top: 15rem;
+}
+.main-heading-title {
+  font-size: 6rem;
+  margin-bottom: 3rem;
+}
+.hero-description {
+  font-size: 2rem;
+}
+
+.main-logo {
+  max-width: 70rem;
+  height: auto;
+}
+
+.hero-subscription {
+  margin-top: 8rem;
+}
+
+.hero-nav {
+  margin-top: 5rem;
+}
+
+.hero-nav-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-nav-description {
+  line-height: 2rem;
+  font-size: 1.65rem;
+  margin-bottom: 10rem;
+}
+
+/*---------------------------------------
+  BUTTONS
+---------------------------------------*/
+
+.btn {
+  background-color: $color-white;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  color: $color-black;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: $color-base-4;
+}
+
+.btn:active {
+  padding: 0.9rem;
+}
+
+.download-btn {
+  border: 0.1rem solid $color-black;
+  display: flex;
+  align-items: center;
+  max-width: 13rem;
+}
+
+.big-btn {
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  color: $color-black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 10rem 10rem;
+  height: 10rem;
+  background-color: $color-red-1;
+}
+.big-btn:hover {
+  transform: translateY(-2rem);
+  background-color: $color-red-15;
+  border: 2rem solid $color-red-15;
+  height: 14rem;
+}
+.get-python-btn {
+  margin-top: 10rem;
+}
+
+/*---------------------------------------
+  HOW TO 
+---------------------------------------*/
+
+.big-python-logo {
+  height: 50rem;
+  width: auto;
+  color: $color-white;
+}
+
+.how-to-description {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+/*---------------------------------------
+  ABOUT
+---------------------------------------*/
+
+.section-identey {
+  margin-top: 20rem;
+}
+
+.name-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: $color-white;
+  color: $color-black;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+}
+
+.name-card:hover,
+.name-card:active {
+  background-color: $color-base-3;
+  transform: translateY(-1.5rem);
+}
+
+.name-card-name {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.name-profile {
+}
+
+@media screen and (max-width: 1400px) {
+  .welcome-logo {
+    display: none;
+  }
+}
+@media screen and (max-width: 670px) {
+  .main-nav-ul {
+    display: none;
+  }
+  .mobile-nav-btn {
+    display: inherit;
+  }
+
+  .mobile-nav-close-btn {
+    display: none;
+  }
+
+  .nav-open {
+    .mobile-nav-close-btn {
+      display: inherit;
+    }
+    .mobile-nav-open-btn {
+      display: none;
+    }
+    .main-nav-ul {
+      position: absolute;
+      display: flex;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(88, 88, 88, 0.99);
+      justify-content: center;
+    }
+    .main-nav-link {
+      font-weight: 500;
+      line-height: 2;
+      font-size: 5rem;
+    }
+  }
+  .mob-btn {
+    font-size: 8rem;
   }
 }
