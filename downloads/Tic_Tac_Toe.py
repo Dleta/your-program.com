@@ -1,11 +1,17 @@
 #Delta
 
 import os
+import platform
 
 position = [1, 2, 3, 4, 5, 6, 7, 8, 9,]
 winner = "a"
 aktuellerZug = "X"
 
+def osClear():
+  if (platform.system() == 'Windows'):
+    os.system("cls")
+  else:
+    os.system("clear")
 
 def struktur():
     print("\n")
@@ -77,13 +83,13 @@ def ZugSpieler():
     else:
         print("nur Zahlen!")
         ZugSpieler()
-    
-    os.system("cls")
 
-
+    osClear()
 
 
 def checkForWinner():
+    global winner
+    winner = winner
     gameFinished = False
     if position[0] == aktuellerZug and position[4] == aktuellerZug and position[8] == aktuellerZug:
         gameFinished =True
@@ -113,12 +119,23 @@ def checkForWinner():
         print("\n" + aktuellerZug + " hat Gewonnen!!! ")
         print("\n")
         struktur()
-        input()
+        winner = "f"
+        return False
+    else:
+        return True
 
+
+
+osClear()
 while winner == "a":
-    ZugSpieler()
-    checkForWinner()
-    aktuellerZug = "O"
-    ZugSpieler()
-    checkForWinner()
-    aktuellerZug = "X"
+    if  winner == "a":
+        aktuellerZug = "X"
+        ZugSpieler()
+        checkForWinner()
+        if  winner == "a":
+            aktuellerZug = "O"
+            ZugSpieler()
+            checkForWinner()
+        
+    else:
+        print("bye")
