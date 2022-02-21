@@ -81,7 +81,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1;
   font-weight: 400;
   color: $main-font;
@@ -251,6 +251,7 @@ a {
   color: $color-black;
   border-radius: 0.5rem;
   transition: all 0.5s;
+  height: auto;
 }
 
 .download-card:hover,
