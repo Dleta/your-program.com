@@ -115,7 +115,7 @@ a {
 
 .grid {
   display: grid;
-  gap: 10rem;
+  gap: 2rem;
   grid-template-columns: repeat(1, 1fr);
 }
 
@@ -139,6 +139,13 @@ a {
 
 .center-text {
   text-align: center;
+}
+
+.center{
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
 
 /*---------------------------------------
@@ -464,8 +471,15 @@ a {
   .about-logo {
     display: none;
   }
+  .big-python-logo{
+    height: 20rem;
+    margin: 0;
+    padding: 0;
+  }
+
 }
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 800px) {
+
   .main-nav-ul {
     display: none;
   }
@@ -508,12 +522,13 @@ a {
   }
   .grid {
     display: grid;
-    gap: 10rem;
+    gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
   }
 
   .grid--2-cols {
     grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
   }
 
   .big-btn {
@@ -542,5 +557,22 @@ a {
 
   .back-btn-ico {
     font-size: 4rem;
+  }
+
+  .subheading-downloads{
+    margin-bottom: 2rem;
+  }
+
+  .how-to-description{
+    margin-top: 2rem;
+  }
+
+  .main-heading-title{
+    font-size: 4rem;
+  }
+
+  .hero-description{
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
