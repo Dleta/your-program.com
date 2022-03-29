@@ -44,6 +44,20 @@ $color-red-19: #4c0000;
 $color-red-20: #330000;
 $color-red-21: #190000;
 
+
+// blue stuff
+
+$color-blue-1: #107efc;
+$color-blue-2: #0e71e3;
+$color-blue-3: #0d65ca;
+$color-blue-4: #107efc;
+$color-blue-5: #107efc;
+$color-blue-6: #107efc;
+$color-blue-7: #107efc;
+$color-blue-8: #107efc;
+$color-blue-9: #107efc;
+$color-blue-10: #107efc;
+
 /*Shady stuff*/
 
 /* level 0 */
@@ -153,7 +167,7 @@ a {
 ---------------------------------------*/
 
 .header {
-  height: 12rem;
+  height: 7.5rem;
   padding: 0 5rem;
   width: 100%;
   display: flex;
@@ -168,10 +182,15 @@ a {
   border-bottom: 0.1rem solid $color-white;
 }
 
+.home{
+  margin-left: 1rem;
+  height: 100%;
+}
+
 .welcome-logo {
   padding: 0;
   margin: 0;
-  height: 10rem;
+  height: 7rem;
   width: auto;
 }
 
@@ -179,7 +198,7 @@ a {
   padding: 0;
   margin: 0;
   margin-top: -10rem;
-  height: 20rem;
+  height: 15rem;
   width: auto;
 }
 
@@ -187,7 +206,7 @@ a {
   padding: 0;
   margin: 0;
   margin-top: -10rem;
-  height: 20rem;
+  height: 15rem;
   width: auto;
 }
 
@@ -222,8 +241,30 @@ a {
 .subheading-downloads {
   margin-bottom: 10rem;
 }
+
+.red-subheading-downloads{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+  color: $color-red-1;
+  font-size: 3rem;
+}
 .hero-downloads {
   margin-top: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.download-nav-ul{
+  list-style: none;
+}
+.download-nav-ul li{
+  margin: 1rem;
+}
+.download-nav-ul li a{
+  color: $color-red-3; //////////////////////////////////////////////////////////////////////////////////////////
 }
 
 .disclaimer-title {
@@ -239,6 +280,7 @@ a {
 
 .disclaimer-hr {
   margin-top: 0.25rem;
+  width: 100%;
 }
 
 .red {
@@ -290,6 +332,9 @@ a {
 .author-ico {
   height: 1.75rem;
   width: 1.75rem;
+  padding: 0;
+  margin: 0;
+  padding-right: 1rem;
 }
 
 .download-description {
@@ -434,6 +479,7 @@ a {
 .section-identity {
   margin-top: 20rem;
 }
+
 
 .name-card {
   display: flex;

@@ -1,10 +1,12 @@
 const btnMobNav = document.querySelector(".mob-btn");
 const headerEl = document.querySelector(".header");
 const allLinks = document.querySelectorAll("a:link");
+try{
+  btnMobNav.addEventListener("click", function () {
+    headerEl.classList.toggle("nav-open");
+  });
+}catch{}
 
-btnMobNav.addEventListener("click", function () {
-  headerEl.classList.toggle("nav-open");
-});
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
