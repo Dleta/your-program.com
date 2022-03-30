@@ -50,13 +50,13 @@ $color-red-21: #190000;
 $color-blue-1: #107efc;
 $color-blue-2: #0e71e3;
 $color-blue-3: #0d65ca;
-$color-blue-4: #107efc;
-$color-blue-5: #107efc;
-$color-blue-6: #107efc;
-$color-blue-7: #107efc;
-$color-blue-8: #107efc;
-$color-blue-9: #107efc;
-$color-blue-10: #107efc;
+$color-blue-4: #0b58b0;
+$color-blue-5: #0a4c97;
+$color-blue-6: #083f7e;
+$color-blue-7: #063265;
+$color-blue-8: #05264c;
+$color-blue-9: #020d19;
+$color-blue-10: #000000;
 
 /*Shady stuff*/
 
@@ -246,9 +246,9 @@ a {
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  margin-top: 5rem;
-  margin-bottom: 2.5rem;
-  color: $color-red-1;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: $color-blue-1;
   font-size: 3rem;
 }
 .hero-downloads {
@@ -256,32 +256,47 @@ a {
   display: flex;
   justify-content: space-between;
 }
-
+.download-nav{
+  margin-top: 10rem;
+}
+.download-nav-tittle{
+  font-size: 2rem;
+}
 .download-nav-ul{
   list-style: none;
+  display: flex;
+  justify-content: center;
 }
 .download-nav-ul li{
   margin: 1rem;
 }
 .download-nav-ul li a{
-  color: $color-red-3; //////////////////////////////////////////////////////////////////////////////////////////
+  color: $color-blue-1;
+  margin-right: 10rem;
+  padding: 1rem 3rem;
+  border: $color-white solid 0.1rem;
 }
 
-.disclaimer-title {
-  color: $color-red-1;
-  margin: 2rem 0;
-  font-size: 2.5rem;
+.download-nav-ul li a:hover{
+  color: $color-white;
+  background-color: $color-blue-6;
 }
 
-.disclaimer {
-  line-height: 2rem;
-  font-size: 1.5rem;
-}
+// .disclaimer-title {
+//   color: $color-red-1;
+//   margin: 2rem 0;
+//   font-size: 2.5rem;
+// }
 
-.disclaimer-hr {
-  margin-top: 0.25rem;
-  width: 100%;
-}
+// .disclaimer {
+//   line-height: 2rem;
+//   font-size: 1.5rem;
+// }
+
+// .disclaimer-hr {
+//   margin-top: 0.25rem;
+//   width: 100%;
+// }
 
 .red {
   color: $color-red-1;
@@ -523,6 +538,10 @@ a {
     padding: 0;
   }
 
+  .download-nav ul{
+    display: none;
+  }
+
 }
 @media screen and (max-width: 800px) {
 
@@ -620,5 +639,9 @@ a {
   .hero-description{
     font-size: 1.5rem;
     line-height: 1.75rem;
+  }
+
+  .download-nav ul{
+    display: none;
   }
 }

@@ -194,9 +194,9 @@ a {
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  margin-top: 5rem;
-  margin-bottom: 2.5rem;
-  color: #ff0000;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #107efc;
   font-size: 3rem;
 }
 
@@ -210,8 +210,22 @@ a {
           justify-content: space-between;
 }
 
+.download-nav {
+  margin-top: 10rem;
+}
+
+.download-nav-tittle {
+  font-size: 2rem;
+}
+
 .download-nav-ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .download-nav-ul li {
@@ -219,23 +233,15 @@ a {
 }
 
 .download-nav-ul li a {
-  color: #ff1919;
+  color: #107efc;
+  margin-right: 10rem;
+  padding: 1rem 3rem;
+  border: #ffffff solid 0.1rem;
 }
 
-.disclaimer-title {
-  color: #ff0000;
-  margin: 2rem 0;
-  font-size: 2.5rem;
-}
-
-.disclaimer {
-  line-height: 2rem;
-  font-size: 1.5rem;
-}
-
-.disclaimer-hr {
-  margin-top: 0.25rem;
-  width: 100%;
+.download-nav-ul li a:hover {
+  color: #ffffff;
+  background-color: #083f7e;
 }
 
 .red {
@@ -512,6 +518,9 @@ a {
     margin: 0;
     padding: 0;
   }
+  .download-nav ul {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -617,6 +626,9 @@ a {
   .hero-description {
     font-size: 1.5rem;
     line-height: 1.75rem;
+  }
+  .download-nav ul {
+    display: none;
   }
 }
 /*# sourceMappingURL=style0.1.css.map */
