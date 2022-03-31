@@ -103,6 +103,10 @@ a {
       align-self: center;
 }
 
+.hide {
+  display: none;
+}
+
 /*---------------------------------------
   NAVIGATION
 ---------------------------------------*/
@@ -176,13 +180,13 @@ a {
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: #ff0000;
+  color: #107efc;
 }
 
 /*---------------------------------------
   DOWNLOADS
 ---------------------------------------*/
-.back-btn-ico {
+.back-btn {
   display: none;
 }
 
@@ -190,7 +194,7 @@ a {
   margin-bottom: 10rem;
 }
 
-.red-subheading-downloads {
+.blue-subheading-downloads {
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -198,6 +202,10 @@ a {
   margin-bottom: 1rem;
   color: #107efc;
   font-size: 3rem;
+}
+
+#python {
+  margin-top: 15rem;
 }
 
 .hero-downloads {
@@ -210,38 +218,46 @@ a {
           justify-content: space-between;
 }
 
-.download-nav {
-  margin-top: 10rem;
+.download-nav-btn {
+  font-size: 5rem;
 }
 
-.download-nav-tittle {
-  font-size: 2rem;
+.home {
+  font-size: 4rem;
+  margin-right: 2.5rem;
+}
+
+.download-nav-btn:hover {
+  color: #107efc;
+}
+
+.download-nav {
+  position: fixed;
+  right: 0rem;
+  top: 7.4rem;
+  border: #ffffff solid 0.1rem;
+  z-index: 999;
+  background-color: #000000;
 }
 
 .download-nav-ul {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .download-nav-ul li {
-  margin: 1rem;
+  padding: 1.5rem 4rem;
 }
 
 .download-nav-ul li a {
-  color: #107efc;
-  margin-right: 10rem;
-  padding: 1rem 3rem;
-  border: #ffffff solid 0.1rem;
+  font-size: 1.5rem;
+}
+
+.download-nav-ul li:hover {
+  background-color: #063265;
 }
 
 .download-nav-ul li a:hover {
-  color: #ffffff;
-  background-color: #083f7e;
+  color: #107efc;
 }
 
 .red {
@@ -608,7 +624,7 @@ a {
     -webkit-transform: none;
             transform: none;
   }
-  .back-btn-ico {
+  .back-btn {
     display: inline-block;
   }
   .back-btn-ico {

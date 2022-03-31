@@ -155,11 +155,15 @@ a {
   text-align: center;
 }
 
-.center{
+.center {
   text-align: center;
   align-items: center;
   align-content: center;
   align-self: center;
+}
+
+.hide {
+  display: none;
 }
 
 /*---------------------------------------
@@ -182,7 +186,7 @@ a {
   border-bottom: 0.1rem solid $color-white;
 }
 
-.home{
+.home {
   margin-left: 1rem;
   height: 100%;
 }
@@ -228,21 +232,24 @@ a {
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: $color-red-1;
+  color: $color-blue-1;
 }
 
 /*---------------------------------------
   DOWNLOADS
 ---------------------------------------*/
 
-.back-btn-ico {
+
+
+.back-btn {
   display: none;
 }
+
 .subheading-downloads {
   margin-bottom: 10rem;
 }
 
-.red-subheading-downloads{
+.blue-subheading-downloads {
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -251,52 +258,61 @@ a {
   color: $color-blue-1;
   font-size: 3rem;
 }
+
+#python {
+  margin-top: 15rem;
+}
+
 .hero-downloads {
   margin-top: 15rem;
   display: flex;
   justify-content: space-between;
 }
-.download-nav{
-  margin-top: 10rem;
+
+.download-nav-btn {
+  font-size: 5rem;
 }
-.download-nav-tittle{
-  font-size: 2rem;
+
+.home {
+  font-size: 4rem;
+  margin-right: 2.5rem;
 }
-.download-nav-ul{
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-.download-nav-ul li{
-  margin: 1rem;
-}
-.download-nav-ul li a{
+
+.download-nav-btn:hover {
   color: $color-blue-1;
-  margin-right: 10rem;
-  padding: 1rem 3rem;
+}
+
+.download-nav {
+  position: fixed;
+  right: 0rem;
+  top: 7.4rem;
   border: $color-white solid 0.1rem;
+  z-index: 999;
+  background-color: $color-black;
 }
 
-.download-nav-ul li a:hover{
-  color: $color-white;
-  background-color: $color-blue-6;
+.download-nav-ul {
+  list-style: none;
 }
 
-// .disclaimer-title {
-//   color: $color-red-1;
-//   margin: 2rem 0;
-//   font-size: 2.5rem;
-// }
+.download-nav-ul li {
+  padding: 1.5rem 4rem;
+}
 
-// .disclaimer {
-//   line-height: 2rem;
-//   font-size: 1.5rem;
-// }
 
-// .disclaimer-hr {
-//   margin-top: 0.25rem;
-//   width: 100%;
-// }
+.download-nav-ul li a {
+  font-size: 1.5rem;
+}
+
+.download-nav-ul li:hover {
+  background-color: $color-blue-7;
+}
+
+.download-nav-ul li a:hover {
+  color: $color-blue-1;
+}
+
+
 
 .red {
   color: $color-red-1;
@@ -385,10 +401,12 @@ a {
 .main-section-hero {
   margin-top: 15rem;
 }
+
 .main-heading-title {
   font-size: 6rem;
   margin-bottom: 3rem;
 }
+
 .hero-description {
   font-size: 2rem;
 }
@@ -462,10 +480,12 @@ a {
   height: 10rem;
   background-color: $color-red-1;
 }
+
 .big-btn:hover {
   background-color: $color-red-15;
   border: 0.5rem solid $color-white;
 }
+
 .get-python-btn {
   margin-top: 10rem;
 }
@@ -526,28 +546,33 @@ a {
   .welcome-logo {
     display: none;
   }
+
   .download-logo {
     display: none;
   }
+
   .about-logo {
     display: none;
   }
-  .big-python-logo{
+
+  .big-python-logo {
     height: 20rem;
     margin: 0;
     padding: 0;
   }
 
-  .download-nav ul{
+  .download-nav ul {
     display: none;
   }
 
 }
+
 @media screen and (max-width: 800px) {
 
   .main-nav-ul {
     display: none;
   }
+
   .mobile-nav-btn {
     display: inherit;
   }
@@ -560,9 +585,11 @@ a {
     .mobile-nav-close-btn {
       display: inherit;
     }
+
     .mobile-nav-open-btn {
       display: none;
     }
+
     .main-nav-ul {
       position: absolute;
       display: flex;
@@ -575,16 +602,19 @@ a {
       background-color: rgba(88, 88, 88, 0.99);
       justify-content: center;
     }
+
     .main-nav-link {
       font-weight: 500;
       line-height: 2;
       font-size: 5rem;
     }
   }
+
   .mob-btn {
     font-size: 8rem;
     z-index: 999999;
   }
+
   .grid {
     display: grid;
     gap: 2rem;
@@ -610,13 +640,15 @@ a {
     margin: 0;
     height: 5rem;
   }
+
   .big-btn:hover {
     transform: none;
   }
 
   // downloads page
 
-  .back-btn-ico {
+
+  .back-btn {
     display: inline-block;
   }
 
@@ -624,24 +656,24 @@ a {
     font-size: 4rem;
   }
 
-  .subheading-downloads{
+  .subheading-downloads {
     margin-bottom: 2rem;
   }
 
-  .how-to-description{
+  .how-to-description {
     margin-top: 2rem;
   }
 
-  .main-heading-title{
+  .main-heading-title {
     font-size: 4rem;
   }
 
-  .hero-description{
+  .hero-description {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 
-  .download-nav ul{
+  .download-nav ul {
     display: none;
   }
 }

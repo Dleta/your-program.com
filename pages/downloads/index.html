@@ -17,30 +17,35 @@
     <body>
         <header class="header">
             <img src="/img/svg/download.svg" alt="welcome logo" class="download-logo">
-            <nav class="main-nav">
+
+            <div class="">
+                <nav class="main-nav">
                 <ul class="main-nav-ul">
-                    <li class="nav-item"><a href="/index.html" class="main-nav-link">HOME<ion-icon name="home" class="home"></ion-icon></a></li>
+                    <li class="nav-item"><a href="/index.html" class="main-nav-link" id="home"><ion-icon name="home" class="home"></ion-icon></a><ion-icon name="menu-outline" class="download-nav-btn"></ion-icon></li>
                 </ul>
             </nav>
+            </div>
             <div class="back-btn">
                 <a href="/index.html">
                     <ion-icon name="arrow-back-outline" class="back-btn-ico"></ion-icon>
                 </a>
+                
             </div>
+
         </header>
 
-            <div class="download-nav center">
-                
+        <div class="download-nav center hide">
 
-                <ul class="download-nav-ul">
-                    <li><a href="#python">Python</a></li>
-                    <li><a href="#shell">SHELL/BASH/CMD</a></li>
-                    <li><a href="#web">WEB DEVELOPMENT</a></li>
-                    <li><a href="#c++">C++</a></li>
-                </ul>
-            </div>
+            <ul class="download-nav-ul">
+                <li><a class="download-nav-li-link" href="#python">Python</a></li>
+                <li><a class="download-nav-li-link" href="#shell">SHELL/BASH/CMD</a></li>
+                <li><a class="download-nav-li-link" href="#web">WEB DEVELOPMENT</a></li>
+                <li><a class="download-nav-li-link" href="#c++">C++</a></li>
+            </ul>
+        </div>
+        <main>
 
-            <h3 class="red-subheading-downloads center-text" id="python">PYTHON</h3>
+            <h3 class="blue-subheading-downloads center-text" id="python">PYTHON</h3>
             <section class="download-cards-section container grid grid--3-cols">
                 
                 <div >
@@ -180,7 +185,7 @@
 
             </section>
 
-            <h3 class="red-subheading-downloads center-text" id="shell">SHELL/BASH/CMD</h3>
+            <h3 class="blue-subheading-downloads center-text" id="shell">SHELL/BASH/CMD</h3>
             <section class="download-cards-section container grid grid--3-cols">
 
                 <div>
@@ -223,7 +228,7 @@
 
             </section>
 
-            <h3 class="red-subheading-downloads center-text" id="web">WEB DEVELOPMENT</h3>
+            <h3 class="blue-subheading-downloads center-text" id="web">WEB DEVELOPMENT</h3>
             <section class="download-cards-section container grid grid--3-cols">
 
                 <div>
@@ -252,7 +257,7 @@
                 </div>
             </section>
 
-            <h3 class="red-subheading-downloads center-text" id="c++">C++</h3>
+            <h3 class="blue-subheading-downloads center-text" id="c++">C++</h3>
             <section class="download-cards-section container grid grid--3-cols">
                 <div>
                     <div class="download-card">
