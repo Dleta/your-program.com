@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const btnMobNav = document.querySelector(".mob-btn");
   const headerEl = document.querySelector(".header");
-  const allLinks = document.querySelectorAll("a:link");
+  const allLinks = document.querySelectorAll(".main-nav-link");
   const downloadMobNavBtn = document.querySelector(".download-nav-btn")
   const downloadNav = document.querySelector(".download-nav")
 
